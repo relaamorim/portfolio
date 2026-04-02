@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro Amorim — Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Ícones Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <!-- Navegação fixa -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">P</span>
+        <span>Pedro Amorim</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <!-- Botão menu mobile -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Seção Hero -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge animate-on-scroll">Portfólio 2026</div>
+      <h1 class="hero-title animate-on-scroll">
+        Olá, eu sou<br>
+        <span class="gradient-text">Pedro Amorim</span>
+      </h1>
+      <p class="hero-subtitle animate-on-scroll">
+        Desenvolvedor apaixonado por criar soluções digitais modernas.
+        Transformando ideias em aplicações reais com tecnologia de ponta.
+      </p>
+      <div class="hero-actions animate-on-scroll">
+        <a href="#projetos" class="btn btn-primary">
+          <i data-lucide="folder-open"></i>
+          Ver Projetos
+        </a>
+        <a href="https://github.com/relaamorim" target="_blank" class="btn btn-secondary">
+          <i data-lucide="github"></i>
+          GitHub
+        </a>
+      </div>
+      <!-- Indicador de tecnologias -->
+      <div class="tech-stack animate-on-scroll">
+        <span class="tech-label">Tecnologias:</span>
+        <div class="tech-tags">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Vercel</span>
+        </div>
+      </div>
+    </div>
+    <!-- Seta animada para rolar -->
+    <a href="#projetos" class="scroll-indicator" aria-label="Rolar para projetos">
+      <i data-lucide="chevrons-down"></i>
+    </a>
+  </section>
+
+  <!-- Seção Projetos -->
+  <section id="projetos">
+    <div class="section-container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Portfólio</span>
+        <h2 class="section-title">Meus Projetos</h2>
+        <p class="section-subtitle">Aplicações publicadas e em produção</p>
+      </div>
+
+      <!-- Card do Projeto TiBum -->
+      <article class="project-card animate-on-scroll">
+        <div class="project-browser">
+          <!-- Barra do navegador simulada -->
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="browser-url">
+              <i data-lucide="lock" class="lock-icon"></i>
+              <span>tibum-saas.vercel.app</span>
+            </div>
+          </div>
+          <!-- Screenshot do projeto -->
+          <div class="browser-content">
+            <div class="project-screenshot" id="screenshot-tibum">
+              <!-- Mockup visual do TiBum -->
+              <div class="mockup-tibum">
+                <div class="mockup-header">
+                  <div class="mockup-logo">🏊 TiBum</div>
+                  <div class="mockup-tagline">Gestão de Piscinas</div>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-card">
+                    <div class="mockup-card-title">Sistema de gestão para lojas e manutenção de piscinas</div>
+                    <div class="mockup-form">
+                      <div class="mockup-input">
+                        <span>📧</span>
+                        <div class="mockup-input-line"></div>
+                      </div>
+                      <div class="mockup-input">
+                        <span>🔒</span>
+                        <div class="mockup-input-line"></div>
+                      </div>
+                      <div class="mockup-btn">Entrar</div>
+                    </div>
+                    <div class="mockup-link">Não tem conta? Cadastre-se</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Informações do projeto -->
+        <div class="project-info">
+          <div class="project-info-header">
+            <h3 class="project-name">TiBum SaaS</h3>
+            <span class="project-status">
+              <span class="status-dot"></span>
+              Em produção
+            </span>
+          </div>
+          <p class="project-description">
+            Sistema completo de gestão para lojas e manutenção de piscinas.
+            Plataforma SaaS com autenticação, cadastro de clientes,
+            gerenciamento de serviços e controle financeiro.
+          </p>
+          <div class="project-tech">
+            <span class="tag tag-ts">TypeScript</span>
+            <span class="tag tag-js">JavaScript</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-db">PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://tibum-saas.vercel.app" target="_blank" class="btn btn-primary btn-sm">
+              <i data-lucide="external-link"></i>
+              Acessar Site
+            </a>
+            <a href="https://github.com/relaamorim/tibum-saas" target="_blank" class="btn btn-secondary btn-sm">
+              <i data-lucide="github"></i>
+              Código Fonte
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Seção de "mais projetos em breve" -->
+      <div class="coming-soon animate-on-scroll">
+        <div class="coming-soon-icon">
+          <i data-lucide="rocket"></i>
+        </div>
+        <h3>Mais projetos em breve</h3>
+        <p>Estou sempre desenvolvendo novas soluções. Acompanhe meu GitHub para novidades!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Sobre -->
+  <section id="sobre">
+    <div class="section-container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Quem sou</span>
+        <h2 class="section-title">Sobre Mim</h2>
+      </div>
+      <div class="about-grid animate-on-scroll">
+        <div class="about-card">
+          <div class="about-icon"><i data-lucide="code-2"></i></div>
+          <h3>Desenvolvimento Web</h3>
+          <p>Criação de aplicações web modernas com React, Next.js e TypeScript.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i data-lucide="database"></i></div>
+          <h3>Banco de Dados</h3>
+          <p>Modelagem e gestão de dados com PostgreSQL e soluções escaláveis.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i data-lucide="cloud"></i></div>
+          <h3>Deploy & Cloud</h3>
+          <p>Publicação e hospedagem de projetos com Vercel e infraestrutura moderna.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <div class="section-container">
+      <div class="contact-box animate-on-scroll">
+        <h2 class="section-title">Vamos conversar?</h2>
+        <p class="section-subtitle">
+          Interessado em trabalhar junto ou tem alguma dúvida? Entre em contato!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:pedrof_c4@hotmail.com" class="btn btn-primary">
+            <i data-lucide="mail"></i>
+            Enviar Email
+          </a>
+          <a href="https://github.com/relaamorim" target="_blank" class="btn btn-secondary">
+            <i data-lucide="github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Pedro Amorim. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
