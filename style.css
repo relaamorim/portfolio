@@ -316,6 +316,18 @@ a {
   transform: translateY(-2px);
 }
 
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+  background: #20bd5a;
+}
+
 .btn-sm {
   padding: 10px 20px;
   font-size: 14px;
@@ -382,9 +394,120 @@ a {
   padding: 0 24px;
 }
 
+#servicos,
 #projetos,
 #sobre {
   padding: 100px 0;
+}
+
+/* ===== Seção Serviços ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: all 0.35s ease;
+  cursor: default;
+}
+
+.service-card:hover {
+  border-color: rgba(108, 60, 224, 0.35);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow), var(--shadow-glow);
+}
+
+/* Card em destaque (featured) */
+.service-card.featured {
+  border-color: var(--primary);
+  background: linear-gradient(165deg, rgba(108, 60, 224, 0.08) 0%, var(--bg-card) 60%);
+}
+
+.service-badge-featured {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: var(--gradient-1);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.service-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(108, 60, 224, 0.1);
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrap {
+  background: var(--gradient-1);
+}
+
+.service-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-light);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrap svg {
+  color: white;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.service-highlight {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: rgba(6, 214, 160, 0.1);
+  border: 1px solid rgba(6, 214, 160, 0.2);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* CTA dos serviços */
+.services-cta {
+  text-align: center;
+  margin-top: 48px;
+  padding: 36px 24px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.services-cta p {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 16px;
 }
 
 .section-header {
@@ -580,6 +703,131 @@ a {
 .mockup-link {
   font-size: 12px;
   color: var(--primary-light);
+}
+
+/* Mockup visual do OdontoChapecó */
+.mockup-odonto {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #0c4a6e 0%, #164e63 40%, #134e4a 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.mockup-odonto-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockup-odonto-logo {
+  font-size: 16px;
+  color: white;
+}
+
+.mockup-odonto-logo strong {
+  color: #5eead4;
+}
+
+.mockup-odonto-nav-links {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mockup-odonto-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.mockup-odonto-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 50px;
+  background: rgba(250, 204, 21, 0.15);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  color: #fde047;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.mockup-odonto-title {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.mockup-odonto-title span {
+  color: #5eead4;
+}
+
+.mockup-odonto-sub {
+  font-size: clamp(11px, 1.3vw, 14px);
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 420px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.mockup-odonto-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mockup-odonto-btn-primary {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mockup-odonto-btn-outline {
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mockup-odonto-info-bar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  flex-wrap: wrap;
+}
+
+/* Tag HTML */
+.tag-html {
+  background: rgba(227, 76, 38, 0.12);
+  color: #fb923c;
+  border: 1px solid rgba(227, 76, 38, 0.25);
+}
+
+/* Espaçamento entre cards de projeto */
+.project-card + .project-card {
+  margin-top: 48px;
 }
 
 /* Informações do projeto */
@@ -867,6 +1115,10 @@ footer {
     letter-spacing: -1px;
   }
 
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -889,5 +1141,14 @@ footer {
 
   .contact-box {
     padding: 40px 20px;
+  }
+
+  .mockup-odonto-nav-links {
+    display: none;
+  }
+
+  .mockup-odonto-info-bar {
+    gap: 12px;
+    font-size: 10px;
   }
 }

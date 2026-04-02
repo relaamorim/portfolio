@@ -73,6 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
     rootMargin: '0px 0px -50px 0px'
   });
 
+  // Aplica delays escalonados nos cards de serviço
+  document.querySelectorAll('.services-grid .service-card').forEach((card, i) => {
+    card.dataset.delay = i * 100;
+  });
+
   // Aplica delays escalonados em elementos dentro de grids
   document.querySelectorAll('.about-grid .about-card').forEach((card, i) => {
     card.classList.add('animate-on-scroll');
